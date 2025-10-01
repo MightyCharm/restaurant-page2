@@ -1,4 +1,5 @@
 import "./styles.css";
+import "@fortawesome/fontawesome-free/css/all.css";
 
 // example of importing an image
 /*
