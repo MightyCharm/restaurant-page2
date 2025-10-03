@@ -12,8 +12,11 @@
   --bg-footer: hsl(240, 23%, 82%);
 }
 
-body,
-.container {
+html {
+  font-size: 16px;
+}
+
+html,body {
   height: 100vh;
 }
 
@@ -25,10 +28,11 @@ body {
 .container {
   display: grid;
   grid-template-rows: 100px 1fr 100px;
-  border: 1px solid red;
+  height: 100%;
+  /* border: 1px solid red; */
 }
 
-header {
+.container-header {
   display: grid;
   grid-template-rows: 1fr 1fr;
   justify-items: center;
@@ -39,21 +43,142 @@ header {
 }
 
 .btn {
-    width: 100px;
-    height: 30px;
-    border: none;
+  width: 100px;
+  height: 30px;
+  border: none;
 }
 
 .btn:hover {
-    background-color: pink;
+  background-color: pink;
 }
 
-main {
-    background-color: var(--bg-main);
+.container-main {
+  min-height: 100%;
+  background-color: var(--bg-main);
+}
+
+.content {
+  display: grid;
+  padding: 2rem;
+
+  min-height: 100%;
+  grid-template-rows: min-content 1fr;
+
+  background-image: url("images/restaurant-dark.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.card {
+  padding: 1rem;
+  background-color: hsla(0, 0%, 100%, 0.8);
+  border-radius: 4px;
+  /* border: 1px solid hsl(0, 0%, 80%); */
+}
+
+/**/
+.home-module {
+  grid-template-areas:
+    "header header"
+    "hours events"
+    "footer footer";
+  grid-template-rows: 2fr 3fr 1fr;
+  gap: 1rem;
+  /* border: 5px solid red; */
+}
+
+.card-home-header {
+  grid-area: header;
+
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  text-align: center;
+  /* border: 2px solid blue; */
+}
+
+
+
+.card-home-hours {
+  grid-area: hours;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
   /* border: 1px solid green; */
 }
 
-footer {
+.card-home-events {
+  grid-area: events;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  /* border: 1px solid red; */
+}
+
+.card-home-hours > h2,
+.card-home-events > h2 {
+  font-weight: normal;
+}
+
+.card-home-hours > ul,
+.card-home-events > ul {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+  list-style-type: none;
+  /* border: 5px solid blue; */
+}
+
+.card-home-hours > ul > li {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: start;
+  /* align-items: center; */
+  gap: 1rem;
+  /* border: 1px solid yellow; */
+}
+
+.card-home-events > ul > li {
+  
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  justify-items: start;
+  /* align-self: center; */
+  gap: 1rem;
+  /* border: 1px solid red; */
+}
+
+.span-day {
+  font-weight: bold;
+}
+
+.span-time-hours,
+.span-time-event {
+  justify-self: end;
+}
+
+
+.card-home-footer {
+  grid-area: footer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-home-footer > p > span {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.container-footer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -65,6 +190,7 @@ footer {
 
 .footer-header {
   /* background-color: red; */
+  font-weight: normal;
 }
 
 .footer-list {
@@ -77,10 +203,9 @@ footer {
 }
 
 .footer-list a {
- display: flex;
- align-items: center;   
+  display: flex;
+  align-items: center;
 }
-
 
 .fa.fa-twitter::before {
   content: "𝕏";
@@ -93,4 +218,12 @@ footer {
 
 .footer-name {
   /* background-color: blue; */
+}
+
+
+@media (min-width: 1500px) {
+  html {
+    border: 1px solid red;
+    font-size: 22px;
+  }
 }
