@@ -1,6 +1,7 @@
 {
     "conventionalCommits.scopes": [
         "layout",
-        "home"
+        "home",
+        "footer"
     ]
 }
