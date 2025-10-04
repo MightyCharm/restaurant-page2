@@ -16,10 +16,6 @@ html {
   font-size: 16px;
 }
 
-html,body {
-  height: 100vh;
-}
-
 body {
   background-color: hsl(195, 4%, 79%);
   font-family: "Montserrat", sans-serif;
@@ -27,17 +23,23 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 100px 1fr 100px;
+  grid-template-rows: 120px 1fr 120px;
   height: 100%;
   /* border: 1px solid red; */
 }
 
+/* header page ================================================ */
 .container-header {
   display: grid;
   grid-template-rows: 1fr 1fr;
   justify-items: center;
   align-items: center;
 
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
   /* border: 1px solid blue; */
   background-color: var(--bg-header);
 }
@@ -52,14 +54,16 @@ body {
   background-color: pink;
 }
 
+/* main page ================================================ */
 .container-main {
   min-height: 100%;
   background-color: var(--bg-main);
+  /* border: 5px solid red; */
 }
 
 .content {
   display: grid;
-  padding: 2rem;
+  padding: 2rem 5rem;
 
   min-height: 100%;
   grid-template-rows: min-content 1fr;
@@ -67,22 +71,23 @@ body {
   background-image: url("images/restaurant-dark.jpg");
   background-position: center;
   background-size: cover;
+
+  /* border: 10px solid pink; */
 }
 
 .card {
-  padding: 1rem;
   background-color: hsla(0, 0%, 100%, 0.8);
-  border-radius: 4px;
+  border-radius: 16px;
   /* border: 1px solid hsl(0, 0%, 80%); */
 }
 
-/**/
+/* Home Module*/
 .home-module {
   grid-template-areas:
     "header header"
     "hours events"
     "footer footer";
-  grid-template-rows: 2fr 3fr 1fr;
+  grid-template-rows: auto auto auto;
   gap: 1rem;
   /* border: 5px solid red; */
 }
@@ -92,13 +97,11 @@ body {
 
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   justify-content: center;
   text-align: center;
+  padding: 1rem;
   /* border: 2px solid blue; */
 }
-
-
 
 .card-home-hours {
   grid-area: hours;
@@ -106,23 +109,29 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   gap: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
   /* border: 1px solid green; */
 }
 
 .card-home-events {
   grid-area: events;
-  
+
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+    padding-top: 1rem;
+  padding-bottom: 2rem;
   /* border: 1px solid red; */
 }
 
 .card-home-hours > h2,
 .card-home-events > h2 {
   font-weight: normal;
+  /* border: 1px solid red; */
 }
 
 .card-home-hours > ul,
@@ -130,9 +139,11 @@ body {
   display: grid;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
 
   height: 100%;
   list-style-type: none;
+
   /* border: 5px solid blue; */
 }
 
@@ -140,13 +151,11 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: start;
-  /* align-items: center; */
   gap: 1rem;
   /* border: 1px solid yellow; */
 }
 
 .card-home-events > ul > li {
-  
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   justify-items: start;
@@ -164,20 +173,30 @@ body {
   justify-self: end;
 }
 
-
 .card-home-footer {
   grid-area: footer;
 
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  gap: 1rem;
+  padding: 1rem;
 }
 
-.card-home-footer > p > span {
+.location {
+  text-align: center;
+}
+
+.location > h3 {
+  font-weight: normal;
+}
+
+.sentence > span {
   font-style: italic;
   font-weight: bold;
 }
 
+/* footer page ================================================ */
 .container-footer {
   display: flex;
   flex-direction: column;
@@ -186,6 +205,7 @@ body {
   gap: 0.5rem;
   /* border: 1px solid rgb(177, 36, 184); */
   background-color: var(--bg-footer);
+  padding: 1rem;
 }
 
 .footer-header {
@@ -219,7 +239,6 @@ body {
 .footer-name {
   /* background-color: blue; */
 }
-
 
 @media (min-width: 1500px) {
   html {

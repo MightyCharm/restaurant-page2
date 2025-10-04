@@ -8,21 +8,14 @@ function createHomeModule() {
 
 function createHeader() {
   const header = document.createElement("header");
-  const h2 = document.createElement("h2");
   const para = document.createElement("p");
-
   header.classList.add("card", "card-home-header");
-
-  h2.textContent = "The Recovery Room";
   para.textContent = `The Recovery Room — a place to unwind and recover from daily \
     stress. Just relax, breathe, and recharge. We use only good ingredients in all \
     our food and drinks — nothing fake, nothing cheap. Just honest, quality stuff \
     that fuels your recovery. Served in a friendly atmosphere where good vibes come \
     easy. No rush, no noise — just peace, flavor, and real moments.`;
-
-  header.appendChild(h2);
   header.appendChild(para);
-
   return header;
 }
 
@@ -110,11 +103,26 @@ function createEvents() {
 
 function createFooter() {
   const footer = document.createElement("footer");
-  const para = document.createElement("p");
+  const para1 = document.createElement("p");
+  const div = document.createElement("div");
+  const h3 = document.createElement("h3");
+  const para2 = document.createElement("p");
+
+  para1.classList.add("sentence");
+  div.classList.add("location");
   footer.classList.add("card", "card-home-footer");
-  para.innerHTML =
+
+  para1.innerHTML =
     "<span>Good</span> food, <span>good</span> vibes, <span>good</span> people — welcome home.";
-  footer.appendChild(para);
+  h3.textContent = "Location";
+  para2.innerHTML =
+    "The Recovery Room<br />123 Serenity Lane<br />Portland, OR 97205<br />USA";
+
+  div.appendChild(h3);
+  div.appendChild(para2);
+
+  footer.appendChild(para1);
+  footer.appendChild(div);
   return footer;
 }
 
