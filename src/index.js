@@ -1,14 +1,10 @@
 import "./styles.css";
 import "@fortawesome/fontawesome-free/css/all.css";
+import { createHomeModule } from "./home.js";
 
-// example of importing an image
-/*
+const content = document.querySelector("#content");
+console.log(content);
 
-import odinImage from "./odin.png";
-   
-const image = document.createElement("img");
-image.src = odinImage;
-   
-document.body.appendChild(image);
+createHomeModule();
 
-*/
+
