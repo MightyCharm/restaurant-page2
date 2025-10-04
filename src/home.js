@@ -27,55 +27,38 @@ function createHeader() {
 }
 
 function createHours() {
+  // data
+  const hoursList = [
+    { day: "Monday:", time: "Closed" },
+    { day: "Tuesday - Thursday:", time: "12 PM - 9 PM" },
+    { day: "Friday - Saturday:", time: "12 PM - 11 PM" },
+    { day: "Sunday:", time: "1 PM - 8 PM" },
+  ];
+
   const section = document.createElement("section");
   const h2 = document.createElement("h2");
   const ul = document.createElement("ul");
-  const list_1 = document.createElement("li");
-  const list_2 = document.createElement("li");
-  const list_3 = document.createElement("li");
-  const list_4 = document.createElement("li");
-  const span_list_1_day = document.createElement("span");
-  const span_list_1_hours = document.createElement("span");
-  const span_list_2_day = document.createElement("span");
-  const span_list_2_hours = document.createElement("span");
-  const span_list_3_day = document.createElement("span");
-  const span_list_3_hours = document.createElement("span");
-  const span_list_4_day = document.createElement("span");
-  const span_list_4_hours = document.createElement("span");
 
   section.classList.add("card", "card-home-hours");
-  span_list_1_day.classList.add("span-day");
-  span_list_1_hours.classList.add("span-time-hours");
-  span_list_2_day.classList.add("span-day");
-  span_list_2_hours.classList.add("span-time-hours");
-  span_list_3_day.classList.add("span-day");
-  span_list_3_hours.classList.add("span-time-hours");
-  span_list_4_day.classList.add("span-day");
-  span_list_4_hours.classList.add("span-time-hours");
 
   h2.textContent = "Opening Hours";
-  span_list_1_day.textContent = "Monday:";
-  span_list_1_hours.textContent = "Closed";
-  span_list_2_day.textContent = "Tuesday-Thursday:";
-  span_list_2_hours.textContent = "12 PM - 9 PM";
-  span_list_3_day.textContent = "Friday - Saturday:";
-  span_list_3_hours.textContent = "12 PM - 11 PM";
-  span_list_4_day.textContent = "Sunday:";
-  span_list_4_hours.textContent = "1 PM - 8 PM";
 
-  list_1.appendChild(span_list_1_day);
-  list_1.appendChild(span_list_1_hours);
-  list_2.appendChild(span_list_2_day);
-  list_2.appendChild(span_list_2_hours);
-  list_3.appendChild(span_list_3_day);
-  list_3.appendChild(span_list_3_hours);
-  list_4.appendChild(span_list_4_day);
-  list_4.appendChild(span_list_4_hours);
+  hoursList.forEach((data) => {
+    const li = document.createElement("li");
+    const span_day = document.createElement("span");
+    const span_hours = document.createElement("span");
 
-  ul.appendChild(list_1);
-  ul.appendChild(list_2);
-  ul.appendChild(list_3);
-  ul.appendChild(list_4);
+    span_day.classList.add("span-day");
+    span_hours.classList.add("span-time-hours");
+
+    span_day.textContent = data.day;
+    span_hours.textContent = data.time;
+
+    li.appendChild(span_day);
+    li.appendChild(span_hours);
+
+    ul.appendChild(li);
+  });
 
   section.appendChild(h2);
   section.appendChild(ul);
@@ -84,68 +67,40 @@ function createHours() {
 }
 
 function createEvents() {
+  const events = [
+    { day: "Fri:", description: "Live Acoustic Night", time: "7 PM" },
+    { day: "Sat:", description: "Strongman Challenge", time: "10 AM" },
+    { day: "Sun:", description: "Yoga Brunch", time: "9 AM" },
+    { day: "Monthly", description: "No-Screen Dinner", time: "Last Wed" },
+  ];
+
   const section = document.createElement("section");
   const h2 = document.createElement("h2");
   const ul = document.createElement("ul");
-  const list_1 = document.createElement("li");
-  const list_2 = document.createElement("li");
-  const list_3 = document.createElement("li");
-  const list_4 = document.createElement("li");
-
-  const span_list_1_day = document.createElement("span");
-  const span_list_1_event = document.createElement("span");
-  const span_list_1_hours = document.createElement("span");
-  const span_list_2_day = document.createElement("span");
-  const span_list_2_event = document.createElement("span");
-  const span_list_2_hours = document.createElement("span");
-  const span_list_3_day = document.createElement("span");
-  const span_list_3_event = document.createElement("span");
-  const span_list_3_hours = document.createElement("span");
-  const span_list_4_day = document.createElement("span");
-  const span_list_4_event = document.createElement("span");
-  const span_list_4_hours = document.createElement("span");
 
   section.classList.add("card", "card-home-events");
-  span_list_1_day.classList.add("span-day");
-  span_list_1_hours.classList.add("span-time-event");
-  span_list_2_day.classList.add("span-day");
-  span_list_2_hours.classList.add("span-time-event");
-  span_list_3_day.classList.add("span-day");
-  span_list_3_hours.classList.add("span-time-event");
-  span_list_4_day.classList.add("span-day");
-  span_list_4_hours.classList.add("span-time-event");
 
   h2.textContent = "Events";
-  span_list_1_day.textContent = "Fri:";
-  span_list_1_event.textContent = "Live Acoustic Night";
-  span_list_1_hours.textContent = "7pm";
-  span_list_2_day.textContent = "Sat:";
-  span_list_2_event.textContent = "Strongman Challenge";
-  span_list_2_hours.textContent = "10AM";
-  span_list_3_day.textContent = "Sun:";
-  span_list_3_event.textContent = "Yoga Brunch";
-  span_list_3_hours.textContent = "9AM";
-  span_list_4_day.textContent = "Monthly:";
-  span_list_4_event.textContent = "No-Screen Dinner";
-  span_list_4_hours.textContent = "Last Wed";
 
-  list_1.appendChild(span_list_1_day);
-  list_1.appendChild(span_list_1_event);
-  list_1.appendChild(span_list_1_hours);
-  list_2.appendChild(span_list_2_day);
-  list_2.appendChild(span_list_2_event);
-  list_2.appendChild(span_list_2_hours);
-  list_3.appendChild(span_list_3_day);
-  list_3.appendChild(span_list_3_event);
-  list_3.appendChild(span_list_3_hours);
-  list_4.appendChild(span_list_4_day);
-  list_4.appendChild(span_list_4_event);
-  list_4.appendChild(span_list_4_hours);
+  events.forEach((data) => {
+    const li = document.createElement("li");
+    const span_day = document.createElement("span");
+    const span_description = document.createElement("span");
+    const span_hours = document.createElement("span");
 
-  ul.appendChild(list_1);
-  ul.appendChild(list_2);
-  ul.appendChild(list_3);
-  ul.appendChild(list_4);
+    span_day.classList.add("span-day");
+    span_hours.classList.add("span-time-event");
+
+    span_day.textContent = data.day;
+    span_description.textContent = data.description;
+    span_hours.textContent = data.time;
+
+    li.appendChild(span_day);
+    li.appendChild(span_description);
+    li.appendChild(span_hours);
+
+    ul.appendChild(li);
+  });
 
   section.appendChild(h2);
   section.appendChild(ul);
@@ -153,11 +108,12 @@ function createEvents() {
   return section;
 }
 
-function createFooter(parent) {
+function createFooter() {
   const footer = document.createElement("footer");
   const para = document.createElement("p");
   footer.classList.add("card", "card-home-footer");
-  para.innerHTML = "<span>Good</span> food, <span>good</span> vibes, <span>good</span> people — welcome home.";
+  para.innerHTML =
+    "<span>Good</span> food, <span>good</span> vibes, <span>good</span> people — welcome home.";
   footer.appendChild(para);
   return footer;
 }
