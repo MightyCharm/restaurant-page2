@@ -7,7 +7,7 @@ function createFooter() {
 
   para1.classList.add("sentence");
   div.classList.add("location");
-  footer.classList.add("card", "card-home-footer");
+  footer.classList.add("card", "card-restaurant-footer");
 
   para1.innerHTML =
     "<span>Good</span> food, <span>good</span> vibes, <span>good</span> people — welcome home.";
