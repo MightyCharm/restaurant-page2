@@ -2,6 +2,7 @@
     "conventionalCommits.scopes": [
         "layout",
         "home",
-        "footer"
+        "footer",
+        "menu"
     ]
 }
