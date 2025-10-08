@@ -66,7 +66,7 @@ function createEvents() {
     { day: "Fri:", description: "Live Acoustic Night", time: "7 PM" },
     { day: "Sat:", description: "Strongman Challenge", time: "10 AM" },
     { day: "Sun:", description: "Yoga Brunch", time: "9 AM" },
-    { day: "Monthly", description: "No-Screen Dinner", time: "Last Wed" },
+    { day: "Monthly:", description: "No-Screen Dinner", time: "Last Wed" },
   ];
 
   const section = document.createElement("section");
