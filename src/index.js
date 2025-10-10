@@ -1,4 +1,8 @@
-import "./styles.css";
+import "./shared.css";
+import "./home.css";
+import "./menu.css";
+import "./about.css"
+
 import "@fortawesome/fontawesome-free/css/all.css";
 import { createHomeModule } from "./home.js";
 import { createMenuModule } from "./menu.js";
@@ -7,6 +11,7 @@ import { createAboutModule } from "./about.js";
 const content = document.getElementById("content");
 const btnHome = document.getElementById("btnHome");
 const btnMenu = document.getElementById("btnMenu");
+const btnAbout = document.getElementById("btnAbout");
 
 btnHome.addEventListener("click", () => {
   setActiveModule("home-module", createHomeModule);

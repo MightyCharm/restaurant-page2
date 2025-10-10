@@ -1,10 +1,12 @@
-import { createFooter} from "./footer.js";
+import { createFooter } from "./footer.js";
+import featuredDishImg from "./images/shrimp-salad.jpeg";
 
 function createHomeModule() {
   const content = document.getElementById("content");
   content.appendChild(createHeader());
   content.appendChild(createHours());
   content.appendChild(createEvents());
+  content.appendChild(createDailyDish())
   content.appendChild(createFooter());
 }
 
@@ -103,4 +105,74 @@ function createEvents() {
   return section;
 }
 
+function createDailyDish() {
+  const section = document.createElement("section");
+  const article = document.createElement("article");
+  const p = document.createElement("p");
+  const strongName = document.createElement("strong");
+  const figure = document.createElement("figure");
+  const img = document.createElement("img");
+  const figcaption = document.createElement("figcaption");
+  const divPriceInfo = document.createElement("div");
+  const del = document.createElement("del");
+  const span = document.createElement("span");
+  const strongDiscountPrice = document.createElement("strong");
+
+  p.textContent = "Our daily special today";
+  strongName.textContent = "Shrimp Salad";
+  figcaption.textContent = "Chilled Gulf shrimp on a bed of crisp greens with lemon-dill dressing";
+
+  section.classList.add("card", "card-featured-dish");
+  img.classList.add("img-featured-dish");
+  divPriceInfo.classList.add("price-info");
+  span.classList.add("discount");
+  strongDiscountPrice.classList.add("discount");
+
+  del.innerHTML = "<span class='currency'>$</span>12.00";
+  span.textContent = "10%";
+  strongDiscountPrice.textContent = "$10.80";
+
+  img.src = featuredDishImg;
+  img.alt = "Shrimp salad with mixed greens, lemon slices, and a light dressing";
+
+  figure.appendChild(img);
+  figure.appendChild(figcaption);
+
+  divPriceInfo.appendChild(del);
+  divPriceInfo.appendChild(span);
+  divPriceInfo.appendChild(strongDiscountPrice);
+
+  article.appendChild(p);
+  article.appendChild(strongName);
+  article.appendChild(figure);
+  article.appendChild(divPriceInfo);
+
+  section.appendChild(article);
+
+  return section;
+  /*
+   <section class="card card-featured-dish">
+            <article>
+              <p>Our daily special today</p>
+              <strong>Shrimp Salad</strong>
+              <figure class="card-img-description">
+                <img
+                  src="./images/shrimp-salad.jpeg"
+                  alt="Shrimp salad with mixed greens, lemon slices, and a light dressing"
+                  class="img-featured-dish"
+                />
+                <figcaption>
+                  Chilled Gulf shrimp on a bed of crisp greens with lemon-dill
+                  dressing
+                </figcaption>
+              </figure>
+              <div class="price-info">
+                <del><span class="currency">$</span>12.00</del>
+                <span class="discount">-10%</span>
+                <strong class="discount">$10.80</strong>
+               </div>
+            </article>
+          </section>
+  */
+}
 export { createHomeModule };
