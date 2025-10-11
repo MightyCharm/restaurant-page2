@@ -43,7 +43,6 @@ body {
   right: 0;
   padding: 1rem;
   z-index: 1000;
-  /* border: 1px solid blue; */
   background-color: var(--bg-header);
 }
 
@@ -54,6 +53,7 @@ body {
 }
 
 .btn:hover {
+  cursor: pointer;
   background-color: pink;
 }
 
@@ -99,7 +99,6 @@ body {
   gap: 1rem;
 
   list-style-type: none;
-  /* background-color: yellow; */
 }
 
 .footer-list a {
@@ -117,7 +116,6 @@ body {
 }
 
 .footer-name {
-  /* background-color: blue; */
 }
 
 /* footer for restaurant modules*/
@@ -149,7 +147,6 @@ body {
 .location {
   text-align: center;
   padding: 1rem;
-  /* border: 1px solid red; */
 }
 
 .location h3 {
@@ -161,11 +158,14 @@ body {
 }
 
 .contacts {
-  /* border: 1px solid red; */
 }
 
 .contacts ul {
   list-style-type: none;
+}
+
+.active {
+  box-shadow: 0 4px 0 #007acc;
 }
 
 @media (min-width: 1024px) {
@@ -174,12 +174,4 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
   }
-
-  .card-restaurant-footer header {
-    /* grid-column: 2 / 3; */
-  }
-
-  /* body {
-    border: 1px solid red;
-  } */
 }
