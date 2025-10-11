@@ -150,29 +150,5 @@ function createDailyDish() {
   section.appendChild(article);
 
   return section;
-  /*
-   <section class="card card-featured-dish">
-            <article>
-              <p>Our daily special today</p>
-              <strong>Shrimp Salad</strong>
-              <figure class="card-img-description">
-                <img
-                  src="./images/shrimp-salad.jpeg"
-                  alt="Shrimp salad with mixed greens, lemon slices, and a light dressing"
-                  class="img-featured-dish"
-                />
-                <figcaption>
-                  Chilled Gulf shrimp on a bed of crisp greens with lemon-dill
-                  dressing
-                </figcaption>
-              </figure>
-              <div class="price-info">
-                <del><span class="currency">$</span>12.00</del>
-                <span class="discount">-10%</span>
-                <strong class="discount">$10.80</strong>
-               </div>
-            </article>
-          </section>
-  */
 }
 export { createHomeModule };

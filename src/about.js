@@ -42,41 +42,49 @@ function createHeader() {
 function createSectionValues() {
   const data = [
     {
+      icon: "fa-leaf",
       span: "Real Food",
       text: ": No frozen meat, no shortcuts — just fresh ingredients and time-honored recipes.",
     },
     {
+      icon: "fa-heart",
       span: "Relentless Hospitality",
       text: ": Everyone is welcome, respected, and served with warmth, no matter the hour.",
     },
     {
+      icon: "fa-users",
       span: "Family First",
       text: ": We lead with loyalty, love, and the belief that family includes staff and regulars alike.",
     },
     {
+      icon: "fa-tools",
       span: "Pride in Craft",
       text: ": Every dish is made by hand with skill, care, and tradition — because great food starts with respect for the craft.",
     },
     {
+      icon: "fa-home",
       span: "Community Anchor",
       text: ": A place where everyone is welcome to unwind, recharge, and find comfort — body, mind, and soul.",
     },
   ];
 
   const section = document.createElement("section");
-  section.classList.add("card", "section-values");
   const h2 = document.createElement("h2");
-  h2.textContent = "Our Values";
   const ul = document.createElement("ul");
+  section.classList.add("card", "section-values");
+  h2.textContent = "Our Values";
 
   data.forEach((item) => {
     const li = document.createElement("li");
+    const i = document.createElement("i");
     const span = document.createElement("span");
+    i.classList.add("fas", `${item.icon}`);
     span.classList.add("span-value");
 
     span.textContent = item.span;
     const text = document.createTextNode(item.text);
 
+    li.appendChild(i);
     li.appendChild(span);
     li.appendChild(text);
 

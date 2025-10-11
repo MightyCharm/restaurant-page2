@@ -36,7 +36,7 @@ function createHeader() {
   const header = document.createElement("header");
   const h2 = document.createElement("h2");
   header.classList.add("card", "card-menu-header");
-  h2.textContent = "MENU";
+  h2.innerHTML = "MENU";
   header.appendChild(h2);
 
   return header;
@@ -47,7 +47,7 @@ function createSectionDrinks() {
   const h3 = document.createElement("h3");
   section.classList.add("section", "section-drinks");
   h3.classList.add("card");
-  h3.textContent = "Drinks";
+  h3.innerHTML = `<i class="fas fa-cocktail"></i> Drinks`;
   section.appendChild(h3);
 
   const data = [
@@ -69,14 +69,14 @@ function createSectionDrinks() {
       name: "Cola",
       img: colaImg,
       alt: "Cold cola in a clear glass with ice cubes",
-      caption: "Classic cola with a crisp, refreshing finish",
+      caption: "Classic cola with a crisp, refreshing finish and bold fizz",
       price: "3.00",
     },
     {
       name: "Beer",
       img: beerImg,
       alt: "A cold glass of beer with a smooth, creamy foam head",
-      caption: "Cold draft beer, smooth and lightly hopped",
+      caption: "Cold draft beer, smooth with a clean, slightly hopped finish",
       price: "4.00",
     },
     {
@@ -102,7 +102,7 @@ function createSectionStarter() {
   const h3 = document.createElement("h3");
   section.classList.add("section", "section-starter");
   h3.classList.add("card");
-  h3.textContent = "Starter";
+  h3.innerHTML = `<i class="fas fa-plate-wheat"></i> Starter`;
   section.appendChild(h3);
 
   const data = [
@@ -158,7 +158,7 @@ function createSectionMainCourse() {
   const h3 = document.createElement("h3");
   section.classList.add("section", "section-main-course");
   h3.classList.add("card");
-  h3.textContent = "Main Course";
+  h3.innerHTML = `<i class="fas fa-utensils"></i> Main Course`;
   section.appendChild(h3);
 
   const data = [
@@ -215,7 +215,7 @@ function createSectionDessert() {
   const h3 = document.createElement("h3");
   section.classList.add("section", "section-dessert");
   h3.classList.add("card");
-  h3.textContent = "Dessert";
+  h3.innerHTML = `<i class="fas fa-ice-cream"></i> Dessert`;
   section.appendChild(h3);
 
   const data = [
@@ -251,7 +251,7 @@ function createSectionDessert() {
       name: "Banana Split",
       img: bananaSplitImg,
       alt: "Banana split with scoops of ice cream, whipped cream, and chocolate sauce",
-      caption: "Classic banana split with scoops of ice cream, whipped cream and chocolate sauce",
+      caption: "Classic banana split with scoops of ice cream and whipped cream",
       price: "7.00",
     },
     {
@@ -275,21 +275,24 @@ function createSection(section, data) {
     const figure = document.createElement("figure");
     const img = document.createElement("img");
     const figcaption = document.createElement("figcaption");
-    const p = document.createElement("p");
+    const footer = document.createElement("footer");
+
 
     article.classList.add("card", "card-menu");
     figure.classList.add("card-img-description");
+    footer.classList.add("menu-price");
     img.src = item.img;
     img.alt = item.alt;
     strong.textContent = item.name;
     figcaption.textContent = item.caption;
-    p.innerHTML = `<span class='currency'>$</span>${item.price}`;
+
+    footer.innerHTML = `<span class='currency'>$</span>${item.price}`;
     figure.appendChild(img);
     figure.appendChild(figcaption);
 
     article.appendChild(strong);
     article.appendChild(figure);
-    article.appendChild(p);
+    article.appendChild(footer);
 
     section.appendChild(article);
   });

@@ -6,7 +6,6 @@
     "cuisine"
     "footer";
   gap: 2rem;
-  /* border: 10px solid red; */
   text-align: center;
 }
 
@@ -23,10 +22,10 @@
 
   display: flex;
   flex-direction: column;
+
   padding: 1rem 2rem;
   gap: 1rem;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  /* border: 5px solid red; */
 }
 
 .section-values {
@@ -37,7 +36,6 @@
   padding: 1rem 2rem;
   gap: 1rem;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  /* border: 5px solid red; */
 }
 
 .span-value {
@@ -49,8 +47,10 @@
 .section-values > ul {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   gap: 1rem;
   list-style-type: none;
+  height: 100%;
 }
 
 .section-values > ul > li {
@@ -64,7 +64,6 @@
   padding: 1rem 2rem;
   gap: 1rem;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  /* border: 5px solid red; */
 }
 
 .section-cuisine {
@@ -75,7 +74,6 @@
   padding: 1rem 2rem;
   gap: 1rem;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  /* border: 5px solid red; */
 }
 
 .section-cuisine > article {
@@ -91,15 +89,6 @@
   object-fit: cover;
   overflow: hidden;
   border-radius: 8px 8px 0 0;
-  /* padding: 1rem; */
-}
-
-.about-header:hover,
-.section-values:hover,
-.section-team:hover,
-.section-cuisine:hover {
-  box-shadow: 0px 0px 15px hsla(0, 0%, 100%, 0.2);
-  transform: scale(1.03);
 }
 
 /* footer for restaurant modules*/
@@ -117,9 +106,13 @@
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
+.about-header:hover,
+.section-values:hover,
+.section-team:hover,
+.section-cuisine:hover,
 .card-restaurant-footer:hover {
-  box-shadow: 0px 0px 15px hsla(0, 0%, 100%, 0.2);
   transform: scale(1.03);
+  box-shadow: 0px 0px 15px hsla(0, 0%, 100%, 0.2);
 }
 
 .location {
@@ -137,15 +130,6 @@
 }
 
 @media (min-width: 768px) {
-  .home-module {
-    grid-template-areas:
-      "header header header"
-      "hours dish events"
-      "footer footer footer";
-    grid-template-rows: auto auto auto;
-    gap: 1rem;
-  }
-
   .about-module {
     grid-template-areas:
       "header header"
@@ -157,10 +141,6 @@
   .img-frying-pan {
     width: 80%;
   }
-
-  body {
-    border: 5px solid red;
-  }
 }
 
 @media (min-width: 1024px) {
@@ -169,10 +149,5 @@
       "header values cuisine"
       "team team team"
       "footer footer footer";
-    /* border: 5px solid yellow; */
-  }
-
-  body {
-    /* border: 5px solid rgb(13, 0, 255); */
   }
 }
