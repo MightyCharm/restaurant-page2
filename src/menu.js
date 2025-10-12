@@ -23,6 +23,33 @@ import cheeseCakeImg from "./images/cheesecake.jpg";
 import bananaSplitImg from "./images/banana-split.jpg";
 import waffleIceImg from "./images/waffle-ice.jpg";
 
+const imagesMenu = [
+  sparklingWaterImg,
+  juiceImg,
+  colaImg,
+  beerImg,
+  wineImg,
+  margaritaImg,
+  soupTomatoImg,
+  soupPumpkinImg,
+  soupAsparagusImg,
+  shrimpSaladImg,
+  saladChickenImg,
+  saladTomatoImg,
+  steakFriesImg,
+  hamburgerFriesImg,
+  pizzaSalamiImg,
+  pizzaMargheritaImg,
+  fishVegetablesImg,
+  schnitzelImg,
+  iceCreamVanillaImg,
+  iceCreamChocolateImg,
+  chocolateCakeImg,
+  cheeseCakeImg,
+  bananaSplitImg,
+  waffleIceImg,
+];
+
 function createMenuModule() {
   const content = document.getElementById("content");
   content.appendChild(createHeader());
@@ -173,29 +200,31 @@ function createSectionMainCourse() {
       name: "Hamburger and Fries",
       img: hamburgerFriesImg,
       alt: "Juicy hamburger with melted cheese and a pile of fries on a black plate",
-      caption: "Grilled beef patty with cheddar, lettuce, onion, and crispy fries",
+      caption:
+        "Grilled beef patty with cheddar, lettuce, onion, and crispy fries",
       price: "11.00",
     },
     {
       name: "Pizza Salami",
       img: pizzaSalamiImg,
       alt: "Wood-fired salami pizza with bubbling cheese and fresh oregano",
-      caption: "Wood-fired pizza with spicy salami, mozzarella, and fresh oregano",
+      caption:
+        "Wood-fired pizza with spicy salami, mozzarella, and fresh oregano",
       price: "16.00",
     },
     {
       name: "Pizza Margherita",
       img: pizzaMargheritaImg,
       alt: "Classic Margherita pizza with tomato, mozzarella, and basil",
-      caption: "Classic Neapolitan-style with tomato, mozzarella, and fresh basil",
+      caption:
+        "Classic Neapolitan-style with tomato, mozzarella, and fresh basil",
       price: "15.00",
     },
     {
       name: "Fish and Vegetables",
       img: fishVegetablesImg,
       alt: "Pan-seared fish fillet with roasted seasonal vegetables",
-      caption:
-        "Pan-seared cod with seasonal roasted veggies and lemon butter",
+      caption: "Pan-seared cod with seasonal roasted veggies and lemon butter",
       price: "18.00",
     },
     {
@@ -251,7 +280,8 @@ function createSectionDessert() {
       name: "Banana Split",
       img: bananaSplitImg,
       alt: "Banana split with scoops of ice cream, whipped cream, and chocolate sauce",
-      caption: "Classic banana split with scoops of ice cream and whipped cream",
+      caption:
+        "Classic banana split with scoops of ice cream and whipped cream",
       price: "7.00",
     },
     {
@@ -263,20 +293,17 @@ function createSectionDessert() {
     },
   ];
 
-  
   return createSection(section, data);
 }
 
-
 function createSection(section, data) {
-   data.forEach((item) => {
+  data.forEach((item) => {
     const article = document.createElement("article");
     const strong = document.createElement("strong");
     const figure = document.createElement("figure");
     const img = document.createElement("img");
     const figcaption = document.createElement("figcaption");
     const footer = document.createElement("footer");
-
 
     article.classList.add("card", "card-menu");
     figure.classList.add("card-img-description");
@@ -298,7 +325,6 @@ function createSection(section, data) {
   });
 
   return section;
-} 
+}
 
-
-export { createMenuModule };
+export { createMenuModule, imagesMenu };

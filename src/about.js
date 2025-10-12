@@ -2,6 +2,8 @@ import { createFooter } from "./footer.js";
 import restaurantImg from "./images/restaurant-vintage.jpg";
 import fryingPanImg from "./images/frying-pan.jpg";
 
+const imagesAbout = [restaurantImg, fryingPanImg];
+
 function createAboutModule() {
   console.log("createAboutModule()");
   const content = document.getElementById("content");
@@ -207,4 +209,4 @@ function createSectionCuisine() {
   return section;
 }
 
-export { createAboutModule };
+export { createAboutModule, imagesAbout };

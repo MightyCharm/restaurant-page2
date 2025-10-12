@@ -1,12 +1,11 @@
+import "@fortawesome/fontawesome-free/css/all.css";
 import "./shared.css";
 import "./home.css";
 import "./menu.css";
 import "./about.css";
-
-import "@fortawesome/fontawesome-free/css/all.css";
 import { createHomeModule } from "./home.js";
-import { createMenuModule } from "./menu.js";
-import { createAboutModule } from "./about.js";
+import { createMenuModule, imagesMenu } from "./menu.js";
+import { createAboutModule, imagesAbout } from "./about.js";
 
 const content = document.getElementById("content");
 const btnHome = document.getElementById("btnHome");
@@ -43,13 +42,18 @@ function setActiveButton(btn) {
   btn.classList.add("active");
 }
 
+function preloadImages(images) {
+  images.forEach((src) => {
+    const img = new Image();
+    img.src = src;
+  });
+}
+
 function firstCall() {
   setActiveModule("home-module", createHomeModule);
   setActiveButton(btnHome);
-  
+  preloadImages(imagesMenu);
+  preloadImages(imagesAbout);
 }
 
-
 firstCall();
-
-
