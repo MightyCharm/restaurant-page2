@@ -118,6 +118,15 @@ body {
 .footer-name {
 }
 
+.footer-list a {
+  text-decoration: none;
+  /* border: 1px solid red; */
+}
+
+.link-text {
+  text-decoration: underline;
+}
+
 /* footer for restaurant modules*/
 .card-restaurant-footer {
   grid-area: footer;
@@ -174,4 +183,8 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
   }
+}
+
+.contacts i {
+  text-decoration: none;
 }

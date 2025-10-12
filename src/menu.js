@@ -298,6 +298,7 @@ function createSection(section, data) {
   });
 
   return section;
-}
+} 
+
 
 export { createMenuModule };

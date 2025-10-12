@@ -45,6 +45,11 @@ function setActiveButton(btn) {
 
 function firstCall() {
   setActiveModule("home-module", createHomeModule);
+  setActiveButton(btnHome);
+  
 }
 
+
 firstCall();
+
+
