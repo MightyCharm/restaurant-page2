@@ -32,51 +32,51 @@ Photo by <a href="https://unsplash.com/@almapapi?utm_content=creditCopyText&utm_
 // soup-tomato:
 Photo by <a href="https://unsplash.com/@sunorwind?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">sunorwind</a> on <a href="https://unsplash.com/photos/tomato-soup-in-white-ceramic-bowl-xBaa9lSMvP0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
 
-// soup-pumpkin-cream
+// soup-pumpkin-cream:
 Photo by <a href="https://unsplash.com/@karyna_panchenko?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Karyna Panchenko</a> on <a href="https://unsplash.com/photos/a-bowl-of-carrot-soup-with-parsley-on-top-2beCqCd8mAc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
 
-// chocolate cake with strawberries
+// chocolate cake with strawberries:
 Photo by <a href="https://unsplash.com/@imaxpanama?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Max Panamá</a> on <a href="https://unsplash.com/photos/chocolate-cake-with-strawberries-AWFYboL6BE4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
 
-// hamburger with fries
+// hamburger with fries:
 Photo by <a href="https://unsplash.com/@fotosdealimentos?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Fotografía de Alimentos</a> on <a href="https://unsplash.com/photos/a-black-plate-topped-with-a-burger-and-fries-xFXdJAkd-Z4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
 
-// fish with vegetables
+// fish with vegetables:
 Photo by <a href="https://unsplash.com/@_carolineattwood?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Caroline Attwood</a> on <a href="https://unsplash.com/photos/grilled-fish-cooked-vegetables-and-fork-on-plate-bpPTlXWTOvg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
 
-// cheese cake
+// cheese cake:
 Photo by <a href="https://unsplash.com/@musicvibe12?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Med Wael Laraiedh</a> on <a href="https://unsplash.com/photos/a-piece-of-cheesecake-on-a-white-plate-hszGPnZGB3A?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
 
-// waffles with ice cream
+// waffles with ice cream:
 Photo by <a href="https://unsplash.com/@rawkkim?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">rawkkim</a> on <a href="https://unsplash.com/photos/a-white-plate-topped-with-waffles-and-ice-cream-4douFUDOqq8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
 
-// banana split
+// banana split:
 Photo by <a href="https://unsplash.com/@mollysuek?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Molly Keesling</a> on <a href="https://unsplash.com/photos/a-plate-of-food-7YhrOw6Kngo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
 
-// schnitzel
+// schnitzel:
 Photo by <a href="https://unsplash.com/@markkoenig?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Mark König</a> on <a href="https://unsplash.com/photos/fried-food-on-white-ceramic-plate-MyfbM2QYF4o?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
 
-// orange juice
+// orange juice:
 Photo by <a href="https://unsplash.com/@sastravila?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">novila misastra</a> on <a href="https://unsplash.com/photos/a-glass-of-lemonade-sitting-on-top-of-a-wooden-table-vL2t0DYEDLo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
       
-// cola
+// cola:
 Photo by <a href="https://unsplash.com/@mkatib?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Mohammed Katib</a> on <a href="https://unsplash.com/photos/a-glass-of-ice-tea-on-a-white-background-Yq58lJStQ5M?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
 
-// sparkling water
+// sparkling water:
 Photo by <a href="https://unsplash.com/@giorgiotrovato?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Giorgio Trovato</a> on <a href="https://unsplash.com/photos/clear-drinking-glass-with-water-ctsDh_IgRKo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
 
-// beer
+// beer:
 Photo by <a href="https://unsplash.com/@malirsvetlem?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Kratky Jaromir</a> on <a href="https://unsplash.com/photos/a-mug-of-beer-on-a-bar-vexrSwTropM?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
       
-// wine
+// wine:
 Photo by <a href="https://unsplash.com/@patrickian4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Patrick Fore</a> on <a href="https://unsplash.com/photos/clear-wine-glass-p1WB-F_p_Vk?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
       
-// margarita
+// margarita:
 Photo by <a href="https://unsplash.com/@cocktailbart?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Johann Trasch</a> on <a href="https://unsplash.com/photos/clear-tealight-candle-on-gray-slab-uE-BD8_Cx18?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
 
-// vintage restaurant
+// vintage restaurant:
 Photo by <a href="https://unsplash.com/@lukasmenke?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Lukas Menke</a> on <a href="https://unsplash.com/photos/a-brick-building-with-a-clock-on-it-xOMWnlpEgPI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
       
-// frying-pan
+// frying-pan:
 Photo by <a href="https://unsplash.com/@louishansel?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Louis Hansel</a> on <a href="https://unsplash.com/photos/black-frying-pan-with-fire-cXFYRIm1xPQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
         
