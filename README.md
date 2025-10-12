@@ -17,7 +17,7 @@ This is my second, improved version of that project.
 - npm, webpack, JavaScript, CSS
 
 ## Live Demo
-xxx
+https://mightycharm.github.io/restaurant-page2/
 
 ## How to run locally
 npm install
