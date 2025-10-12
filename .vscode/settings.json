@@ -7,7 +7,8 @@
         "nav",
         "css",
         "readme",
-        "ui"
+        "ui",
+        "build"
     ],
     "cSpell.ignoreWords": [
         "Annika",

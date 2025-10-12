@@ -1,12 +1,15 @@
 import { createFooter } from "./footer.js";
 import featuredDishImg from "./images/shrimp-salad.jpeg";
+import { data } from "./menu.js";
+
+let dailyDish = null;
 
 function createHomeModule() {
   const content = document.getElementById("content");
   content.appendChild(createHeader());
   content.appendChild(createHours());
   content.appendChild(createEvents());
-  content.appendChild(createDailyDish())
+  content.appendChild(getRandomDish())
   content.appendChild(createFooter());
 }
 
@@ -105,7 +108,8 @@ function createEvents() {
   return section;
 }
 
-function createDailyDish() {
+function createDailyDish(dish) {
+  console.log(dish);
   const section = document.createElement("section");
   const article = document.createElement("article");
   const p = document.createElement("p");
@@ -119,8 +123,8 @@ function createDailyDish() {
   const strongDiscountPrice = document.createElement("strong");
 
   p.textContent = "Our daily special today";
-  strongName.textContent = "Shrimp Salad";
-  figcaption.textContent = "Chilled Gulf shrimp on a bed of crisp greens with lemon-dill dressing";
+  strongName.textContent = dish.name;
+  figcaption.textContent = dish.caption;
 
   section.classList.add("card", "card-featured-dish");
   img.classList.add("img-featured-dish");
@@ -128,27 +132,32 @@ function createDailyDish() {
   span.classList.add("discount");
   strongDiscountPrice.classList.add("discount");
 
-  del.innerHTML = "<span class='currency'>$</span>12.00";
+  del.innerHTML = `<span class='currency'>$</span>${dish.price}`;
   span.textContent = "10%";
-  strongDiscountPrice.textContent = "$10.80";
+  strongDiscountPrice.textContent = `$${dish.discount}`;
 
-  img.src = featuredDishImg;
-  img.alt = "Shrimp salad with mixed greens, lemon slices, and a light dressing";
+  img.src = dish.img;
+  img.alt = dish.alt;
 
   figure.appendChild(img);
   figure.appendChild(figcaption);
-
   divPriceInfo.appendChild(del);
   divPriceInfo.appendChild(span);
   divPriceInfo.appendChild(strongDiscountPrice);
-
   article.appendChild(p);
   article.appendChild(strongName);
   article.appendChild(figure);
   article.appendChild(divPriceInfo);
-
   section.appendChild(article);
 
   return section;
 }
-export { createHomeModule };
+
+function getRandomDish() {
+  if(!dailyDish) {
+    dailyDish = data[Math.floor(Math.random() * data.length)];
+  }
+  return createDailyDish(dailyDish);
+}
+
+export { createHomeModule, featuredDishImg };
