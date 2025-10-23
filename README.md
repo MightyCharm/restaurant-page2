@@ -20,5 +20,5 @@ This is my second, improved version of that project.
 https://mightycharm.github.io/restaurant-page2/
 
 ## How to run locally
-npm install
+npm install  
 npm start
