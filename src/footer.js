@@ -15,59 +15,82 @@ function createFooter() {
   ];
   const footer = document.createElement("footer");
   const header = document.createElement("header");
+
   const divLocation = document.createElement("div");
-  const divContacts = document.createElement("div");
-  const h3_address = document.createElement("h3");
-  const ul_address = document.createElement("ul");
-  const h3_contacts = document.createElement("h3");
-  const ul_contacts = document.createElement("ul");
-  const li_1 = document.createElement("li");
-  const li_2 = document.createElement("li");
-  const li_3 = document.createElement("li");
+  const divLocationHeader = document.createElement("div");
+  const iconLocation = document.createElement("i");
+  const h3Location = document.createElement("h3");
+  const ulLocation = document.createElement("ul");
+
+  const divContact = document.createElement("div");
+  const divContactHeader = document.createElement("div");
+  const iconContact = document.createElement("i");
+  const h3Contact = document.createElement("h3");
+
+  const ulContact = document.createElement("ul");
+  const li1 = document.createElement("li");
+  const li2 = document.createElement("li");
+  const li3 = document.createElement("li");
   const a = document.createElement("a");
   a.href = "#";
   a.target = "_blank";
 
   header.classList.add("sentence");
+
   divLocation.classList.add("location");
-  divContacts.classList.add("contacts");
+  divLocationHeader.classList.add("location-header");
+  iconLocation.classList.add("fas", "fa-location-dot");
+  iconLocation.setAttribute("aria-hidden", "true");
+  ulLocation.classList.add("ul-location");
+
+  divContact.classList.add("contacts");
+  divContactHeader.classList.add("contact-header");
+  iconContact.classList.add("fas", "fa-phone");
+  iconContact.setAttribute("aria-hidden", "true");
+  ulContact.classList.add("ul-contact");
+  a.classList.add("link-email-contact");
 
   footer.classList.add("card", "card-restaurant-footer");
 
   header.innerHTML =
     "<span>Good</span> food, <span>good</span> vibes, <span>good</span> people — welcome home.";
 
-  h3_address.textContent = "Location";
-  h3_contacts.textContent = "Contacts";
+  h3Location.textContent = "Location";
+  h3Contact.textContent = "Contact";
 
   // create list items and append to ul list
   dataLocation.forEach((item) => {
     const li = document.createElement("li");
     li.textContent = item.text;
 
-    ul_address.appendChild(li);
+    ulLocation.appendChild(li);
   });
 
-  li_1.textContent = "(555) 867-5309";
+  li1.textContent = "(555) 867-5309";
   a.textContent = "info@recoveryroom.com";
-  li_2.appendChild(a);
-  li_3.innerHTML = `<a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+  li2.appendChild(a);
+  li3.innerHTML = `<a href="#" target="_blank"><i class="fa fa-twitter link-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-facebook link-facebook"></i></a>
   `;
 
-  ul_contacts.appendChild(li_1);
-  ul_contacts.appendChild(li_2);
-  ul_contacts.appendChild(li_3);
+  divLocationHeader.appendChild(iconLocation);
+  divLocationHeader.appendChild(h3Location);
+  divLocation.appendChild(divLocationHeader);
+  divLocation.appendChild(ulLocation);
 
-  divLocation.appendChild(h3_address);
-  divLocation.appendChild(ul_address);
+  divContactHeader.appendChild(iconContact);
+  divContactHeader.appendChild(h3Contact);
 
-  divContacts.appendChild(h3_contacts);
-  divContacts.appendChild(ul_contacts);
+  ulContact.appendChild(li1);
+  ulContact.appendChild(li2);
+  ulContact.appendChild(li3);
+
+  divContact.appendChild(divContactHeader);
+  divContact.appendChild(ulContact);
 
   footer.appendChild(header);
   footer.appendChild(divLocation);
-  footer.appendChild(divContacts);
+  footer.appendChild(divContact);
   return footer;
 }
 

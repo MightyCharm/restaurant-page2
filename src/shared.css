@@ -19,7 +19,7 @@
   --col-btn-header-border-hover: rgb(49, 49, 49);
   --btn-header-active: #e7c500;
   /* main elements */
-  --bg-main: hsl(0, 0%, 98%);
+  --bg-main: hsl(0, 0%, 100%);
   /* footer element */
   --col-footer: white;
   --bg-footer: hsl(0, 0%, 40%);
@@ -94,7 +94,7 @@ body {
 
 .content {
   display: grid;
-  padding: 2rem 5rem;
+  /* padding: 2rem 5rem; */
 
   min-height: 100%;
   grid-template-rows: min-content 1fr;
@@ -104,8 +104,8 @@ body {
 }
 
 .card {
-  background-color: hsla(0, 0%, 100%, 0.8);
-  border-radius: 8px;
+  background-color: white;
+  /* border-radius: 8px; */
 }
 
 .container-footer {
@@ -166,17 +166,11 @@ body {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  padding: 1rem;
+  padding: 2rem;
   width: 100%;
   text-align: center;
-  transition:
-    transform 0.3s ease-in-out,
-    box-shadow 0.3s ease-in-out;
-}
 
-.card-restaurant-footer:hover {
-  transform: scale(1.01);
-  box-shadow: 0px 0px 15px hsla(0, 0%, 100%, 0.2);
+  background-color: hsl(0, 0%, 95%);
 }
 
 .sentence > span {
@@ -185,24 +179,66 @@ body {
 }
 
 .location {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
   text-align: center;
-  padding: 1rem;
+  /* padding: 1rem; */
+}
+
+.location-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.fa-location-dot {
 }
 
 .location h3 {
   font-weight: normal;
 }
 
-.location ul {
+.ul-location {
   list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
 }
 
 .contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-.contacts ul {
+.contact-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.ul-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
   list-style-type: none;
 }
+
+.link-email-contact {
+  text-decoration: none;
+  color: rgb(87, 87, 87);
+}
+
+.link-twitter,
+.link-facebook {
+  font-size: 1.2rem;
+  color: rgb(63, 63, 63);
+}
+
+/* special classes and media queries */
 
 .active {
   box-shadow: 0 4px 0 var(--btn-header-active);
@@ -216,11 +252,10 @@ body {
   }
 }
 
-.contacts i {
-  text-decoration: none;
-}
-
 @media (hover: hover) {
+  .card-restaurant-footer:hover {
+    /* box-shadow: 0px 0px 15px hsla(0, 0%, 100%, 1); */
+  }
   .footer-list a:hover {
     transform: scale(1.2);
   }
