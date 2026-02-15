@@ -35,7 +35,7 @@ function setActiveModule(module, createModule) {
 }
 
 function setActiveButton(btn) {
-  const buttons = document.querySelectorAll(".btn");
+  const buttons = document.querySelectorAll(".btn-header");
   buttons.forEach((btn) => {
     btn.classList.remove("active");
   });

@@ -7,8 +7,23 @@
 }
 
 :root {
-  --bg-header: hsl(240, 23%, 82%);
+  /* header element */
+  --col-header: white;
+  --bg-header: hsl(0, 0%, 40%);
+
+  --color-btn-header: rgb(49, 49, 49);
+  --bg-btn-header: hsl(0, 0%, 100%);
+
+  --col-btn-header-hover: white;
+  --bg-btn-header-hover: rgb(65, 65, 65);
+
+  --col-btn-header-border: rgb(49, 49, 49);
+  --col-btn-header-border-hover: rgb(49, 49, 49);
+  --btn-header-active: #e7c500;
+
+  /* main elements */
   --bg-main: hsl(0, 0%, 98%);
+  /* footer elements */
   --bg-footer: hsl(240, 23%, 82%);
 }
 
@@ -28,12 +43,12 @@ body {
 .container {
   flex: 1;
   display: grid;
-  grid-template-rows: 120px 1fr 120px;
+  grid-template-rows: 130px 1fr 130px;
 }
 
 .container-header {
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 0.5fr 1fr;
   justify-items: center;
   align-items: center;
 
@@ -43,18 +58,37 @@ body {
   right: 0;
   padding: 1rem;
   z-index: 1000;
+  border-bottom: 1px solid grey;
+  color: var(--col-header);
   background-color: var(--bg-header);
 }
 
-.btn {
+.container-header h1 {
+}
+
+.container-header p {
+  align-self: start;
+  color: hsl(0, 0%, 88%);
+  font-size: 0.8rem;
+}
+
+.btn-header {
   width: 100px;
   height: 30px;
   border: none;
+  /* border: 1px solid var(--col-btn-header-border); */
+  color: var(--color-btn-header);
+  background-color: var(--bg-btn-header);
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease;
 }
 
-.btn:hover {
+.btn-header:hover {
   cursor: pointer;
-  background-color: pink;
+  /* border: 1px solid var(--col-btn-header-border-hover); */
+  color: var(--col-btn-header-hover);
+  background-color: var(--bg-btn-header-hover);
 }
 
 .container-main {
@@ -69,7 +103,6 @@ body {
   min-height: 100%;
   grid-template-rows: min-content 1fr;
 
-  background-image: url("images/restaurant-dark.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -120,7 +153,6 @@ body {
 
 .footer-list a {
   text-decoration: none;
-  /* border: 1px solid red; */
 }
 
 .link-text {
@@ -139,7 +171,9 @@ body {
   padding: 1rem;
   width: 100%;
   text-align: center;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition:
+    transform 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
 }
 
 .card-restaurant-footer:hover {
@@ -150,7 +184,6 @@ body {
 .sentence > span {
   font-style: italic;
   font-weight: bold;
-  /* border: 1px solid rgb(40, 33, 168); */
 }
 
 .location {
@@ -174,7 +207,7 @@ body {
 }
 
 .active {
-  box-shadow: 0 4px 0 #007acc;
+  box-shadow: 0 4px 0 var(--btn-header-active);
 }
 
 @media (min-width: 1024px) {

@@ -58,7 +58,9 @@
   justify-items: center;
   gap: 1rem;
   padding: 1rem;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition:
+    transform 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
 }
 
 .card-menu:hover {
