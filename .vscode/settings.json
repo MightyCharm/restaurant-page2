@@ -1,21 +1,16 @@
 {
-    "conventionalCommits.scopes": [
-        "layout",
-        "home",
-        "footer",
-        "menu",
-        "nav",
-        "css",
-        "readme",
-        "ui",
-        "build",
-        "credits"
-    ],
-    "cSpell.ignoreWords": [
-        "Annika",
-        "Florian",
-        "Hirsch",
-        "Polter",
-        "Schröder"
-    ]
+  "conventionalCommits.scopes": [
+    "layout",
+    "home",
+    "footer",
+    "menu",
+    "nav",
+    "css",
+    "readme",
+    "ui",
+    "build",
+    "credits",
+    "header"
+  ],
+  "cSpell.ignoreWords": ["Annika", "Florian", "Hirsch", "Polter", "Schröder"]
 }

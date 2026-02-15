@@ -10,21 +10,19 @@
   /* header element */
   --col-header: white;
   --bg-header: hsl(0, 0%, 40%);
-
-  --color-btn-header: rgb(49, 49, 49);
+  /* buttons for navigation */
+  --col-btn-header: rgb(49, 49, 49);
   --bg-btn-header: hsl(0, 0%, 100%);
-
   --col-btn-header-hover: white;
   --bg-btn-header-hover: rgb(65, 65, 65);
-
   --col-btn-header-border: rgb(49, 49, 49);
   --col-btn-header-border-hover: rgb(49, 49, 49);
   --btn-header-active: #e7c500;
-
   /* main elements */
   --bg-main: hsl(0, 0%, 98%);
-  /* footer elements */
-  --bg-footer: hsl(240, 23%, 82%);
+  /* footer element */
+  --col-footer: white;
+  --bg-footer: hsl(0, 0%, 40%);
 }
 
 html {
@@ -76,8 +74,7 @@ body {
   width: 100px;
   height: 30px;
   border: none;
-  /* border: 1px solid var(--col-btn-header-border); */
-  color: var(--color-btn-header);
+  color: var(--col-btn-header);
   background-color: var(--bg-btn-header);
   transition:
     color 0.3s ease,
@@ -86,7 +83,6 @@ body {
 
 .btn-header:hover {
   cursor: pointer;
-  /* border: 1px solid var(--col-btn-header-border-hover); */
   color: var(--col-btn-header-hover);
   background-color: var(--bg-btn-header-hover);
 }
@@ -119,6 +115,7 @@ body {
   justify-content: center;
   gap: 0.5rem;
   padding: 1rem;
+  color: var(--col-footer);
   background-color: var(--bg-footer);
 }
 
@@ -137,6 +134,10 @@ body {
 .footer-list a {
   display: flex;
   align-items: center;
+  font-size: 1.6rem;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.4s ease;
 }
 
 .fa.fa-twitter::before {
@@ -149,14 +150,11 @@ body {
 }
 
 .footer-name {
-}
-
-.footer-list a {
-  text-decoration: none;
+  font-size: 0.7rem;
 }
 
 .link-text {
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 
 /* footer for restaurant modules*/
@@ -220,4 +218,10 @@ body {
 
 .contacts i {
   text-decoration: none;
+}
+
+@media (hover: hover) {
+  .footer-list a:hover {
+    transform: scale(1.2);
+  }
 }
