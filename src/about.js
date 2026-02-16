@@ -20,7 +20,7 @@ function createHeader() {
   const p = document.createElement("p");
   const img = document.createElement("img");
   const quote = document.createElement("q");
-  header.classList.add("card", "about-header");
+  header.classList.add("about-header");
   img.classList.add("img-restaurant");
   img.src = restaurantImg;
   img.alt = "an old house in vintage style";
@@ -73,7 +73,7 @@ function createSectionValues() {
   const section = document.createElement("section");
   const h2 = document.createElement("h2");
   const ul = document.createElement("ul");
-  section.classList.add("card", "section-values");
+  section.classList.add("section-values");
   h2.textContent = "Our Values";
 
   data.forEach((item) => {
@@ -95,6 +95,39 @@ function createSectionValues() {
 
   section.appendChild(h2);
   section.appendChild(ul);
+
+  return section;
+}
+
+function createSectionCuisine() {
+  const section = document.createElement("section");
+  const h2 = document.createElement("h2");
+  const article = document.createElement("article");
+  const p_1 = document.createElement("p");
+  const img = document.createElement("img");
+  const p_2 = document.createElement("p");
+
+  section.classList.add("section-cuisine");
+  img.classList.add("img-frying-pan");
+
+  img.src = fryingPanImg;
+
+  img.alt = "Chef tossing fresh tomatoes in a sizzling frying pan";
+
+  h2.textContent = "Cuisine";
+  p_1.textContent = `Our food is made the old-fashioned way — fresh ingredients from
+                local farmers, no pre-cooked or frozen items, and recipes passed
+                down through generations. Simple, honest, and full of flavor.`;
+  p_2.textContent = `A splash of oil, fresh tomatoes, and a flick of the wrist — this
+                is how flavor begins. Every dish starts right here, made by
+                hand, never rushed.`;
+
+  article.appendChild(p_1);
+  article.appendChild(img);
+  article.appendChild(p_2);
+
+  section.appendChild(h2);
+  section.appendChild(article);
 
   return section;
 }
@@ -149,7 +182,7 @@ function createSectionTeam() {
   ];
   const section = document.createElement("section");
   const h2 = document.createElement("h2");
-  section.classList.add("card", "section-team");
+  section.classList.add("section-team");
   h2.textContent = "Our Team";
   section.appendChild(h2);
 
@@ -160,9 +193,12 @@ function createSectionTeam() {
     const p_header = document.createElement("p");
     const p = document.createElement("p");
 
+    header.classList.add("article-team-header");
     h3_header.textContent = item.name;
+
     p_header.textContent = item.role;
 
+    p.classList.add("article-team-text");
     p.textContent = item.bio;
 
     header.appendChild(h3_header);
@@ -173,39 +209,6 @@ function createSectionTeam() {
 
     section.appendChild(article);
   });
-  return section;
-}
-
-function createSectionCuisine() {
-  const section = document.createElement("section");
-  const h2 = document.createElement("h2");
-  const article = document.createElement("article");
-  const p_1 = document.createElement("p");
-  const img = document.createElement("img");
-  const p_2 = document.createElement("p");
-
-  section.classList.add("card", "section-cuisine");
-  img.classList.add("img-frying-pan");
-
-  img.src = fryingPanImg;
-
-  img.alt = "Chef tossing fresh tomatoes in a sizzling frying pan";
-
-  h2.textContent = "Cuisine";
-  p_1.textContent = `Our food is made the old-fashioned way — fresh ingredients from
-                local farmers, no pre-cooked or frozen items, and recipes passed
-                down through generations. Simple, honest, and full of flavor.`;
-  p_2.textContent = `A splash of oil, fresh tomatoes, and a flick of the wrist — this
-                is how flavor begins. Every dish starts right here, made by
-                hand, never rushed.`;
-
-  article.appendChild(p_1);
-  article.appendChild(img);
-  article.appendChild(p_2);
-
-  section.appendChild(h2);
-  section.appendChild(article);
-
   return section;
 }
 

@@ -147,10 +147,6 @@ body {
   font-size: 0.7rem;
 }
 
-.link-text {
-  /* text-decoration: underline; */
-}
-
 /* footer for restaurant modules*/
 .restaurant-footer {
   grid-area: footer;
@@ -167,9 +163,14 @@ body {
   background-color: hsl(0, 0%, 95%);
 }
 
+.sentence {
+  color: hsl(0, 0%, 22%);
+}
+
 .sentence > span {
   font-style: italic;
   font-weight: bold;
+  color: hsl(0, 0%, 17%);
 }
 
 .location {
@@ -188,10 +189,12 @@ body {
 }
 
 .fa-location-dot {
+  color: hsl(0, 0%, 22%);
 }
 
 .location h3 {
   font-weight: normal;
+  color: hsl(0, 0%, 22%);
 }
 
 .ul-location {
@@ -199,6 +202,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
+  color: hsl(0, 0%, 22%);
 }
 
 .contacts {
@@ -214,22 +218,31 @@ body {
   gap: 1rem;
 }
 
+.fa-phone {
+  color: hsl(0, 0%, 22%);
+}
+
+.contact-header > h3 {
+  color: hsl(0, 0%, 22%);
+}
+
 .ul-contact {
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
   list-style-type: none;
+  color: hsl(0, 0%, 22%);
 }
 
 .link-email-contact {
   text-decoration: none;
-  color: rgb(87, 87, 87);
+  color: hsl(0, 0%, 22%);
 }
 
 .link-twitter,
 .link-facebook {
   font-size: 1.2rem;
-  color: rgb(63, 63, 63);
+  color: hsl(0, 0%, 22%);
 }
 
 /* special classes and media queries */

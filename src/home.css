@@ -76,7 +76,6 @@
   gap: 1rem;
   width: 100%;
   padding: 2rem;
-  /* border: 1px solid grey; */
   background-color: hsl(0, 0%, 95%);
 }
 
@@ -89,16 +88,16 @@
   gap: 1rem;
   width: 100%;
   padding: 2rem;
-  /* border: 1px solid grey; */
+  background-color: hsl(0, 0%, 90%);
 }
 
-.card-home-hours > h2,
-.card-home-events > h2 {
+.home-hours > h2,
+.home-events > h2 {
   font-weight: normal;
 }
 
-.card-home-hours > ul,
-.card-home-events > ul {
+.home-hours > ul,
+.home-events > ul {
   display: grid;
   justify-content: center;
   align-items: center;
@@ -108,7 +107,7 @@
   list-style-type: none;
 }
 
-.card-home-hours > ul > li {
+.home-hours > ul > li {
   display: grid;
   grid-template-columns: 2fr 1fr;
   justify-items: start;
@@ -117,7 +116,7 @@
   border-bottom: 1px solid rgb(183, 183, 183);
 }
 
-.card-home-events > ul > li {
+.home-events > ul > li {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   justify-items: start;
@@ -146,29 +145,19 @@
     grid-template-columns: 1fr 1fr 1fr;
   }
 
-  .card-home-header {
+  .home-header {
     background-color: white;
   }
 
-  .card-featured-dish {
+  .featured-dish {
     background-color: hsl(30, 2%, 90%);
   }
 
-  .card-home-events {
+  .home-events {
     background-color: hsl(0, 0%, 95%);
   }
 
-  .card-restaurant-footer {
+  .restaurant-footer {
     background-color: white;
-  }
-}
-
-@media (hover: hover) {
-  .card-home-header:hover,
-  .card-home-hours:hover,
-  .card-home-events:hover,
-  .card-featured-dish:hover {
-    /* border: 5px solid pink; */
-    /* box-shadow: 0px 0px 15px hsla(0, 0%, 100%, 0.2); */
   }
 }

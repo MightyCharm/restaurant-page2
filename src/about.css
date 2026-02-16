@@ -2,19 +2,11 @@
   grid-template-areas:
     "header"
     "values"
-    "team"
     "cuisine"
+    "team"
     "footer";
-  gap: 2rem;
   text-align: center;
-}
-
-.img-restaurant {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  overflow: hidden;
-  border-radius: 8px 8px 0 0;
+  background-color: red;
 }
 
 .about-header {
@@ -22,10 +14,33 @@
 
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   padding: 1rem 2rem;
   gap: 1rem;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  width: 100%;
+  background-color: hsl(0, 0%, 95%);
+}
+
+.about-header h2 {
+  /* border: 1px solid red; */
+  color: hsl(0, 0%, 22%);
+}
+
+.about-header p {
+  color: hsl(0, 0%, 22%);
+}
+
+.about-header q {
+  color: hsl(0, 0%, 22%);
+}
+
+.img-restaurant {
+  width: 80%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 2px;
 }
 
 .section-values {
@@ -33,15 +48,14 @@
 
   display: flex;
   flex-direction: column;
-  padding: 1rem 2rem;
   gap: 1rem;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  padding: 1rem 2rem;
+  width: 100%;
+  background-color: hsl(0, 0%, 90%);
 }
 
-.span-value {
-  font-weight: bold;
-  font-style: italic;
-  /* border: 1px solid red; */
+.section-values h2 {
+  color: hsl(0, 0%, 22%);
 }
 
 .section-values > ul {
@@ -54,16 +68,22 @@
 }
 
 .section-values > ul > li {
+  color: hsl(0, 0%, 22%);
 }
 
-.section-team {
-  grid-area: team;
+.fa-leaf,
+.fa-heart,
+.fa-users,
+.fa-tools,
+.fa-home {
+  color: hsl(0, 0%, 22%);
+  margin: 0 0.2rem;
+}
 
-  display: flex;
-  flex-direction: column;
-  padding: 1rem 2rem;
-  gap: 1rem;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+.span-value {
+  font-weight: bold;
+  font-style: italic;
+  color: hsl(0, 0%, 22%);
 }
 
 .section-cuisine {
@@ -73,7 +93,12 @@
   flex-direction: column;
   padding: 1rem 2rem;
   gap: 1rem;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  width: 100%;
+  background-color: hsl(0, 0%, 95%);
+}
+
+.section-cuisine h2 {
+  color: hsl(0, 0%, 22%);
 }
 
 .section-cuisine > article {
@@ -81,6 +106,10 @@
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+}
+
+.section-cuisine > article > p {
+  color: hsl(0, 0%, 22%);
 }
 
 .img-frying-pan {
@@ -91,16 +120,32 @@
   border-radius: 8px 8px 0 0;
 }
 
+.section-team {
+  grid-area: team;
 
-
-.about-header:hover,
-.section-values:hover,
-.section-team:hover,
-.section-cuisine:hover {
-  transform: scale(1.01);
-  box-shadow: 0px 0px 15px hsla(0, 0%, 100%, 0.2);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  gap: 2rem;
+  width: 100%;
+  background-color: hsl(0, 0%, 85%);
 }
 
+.section-team h2 {
+  color: hsl(0, 0%, 20%);
+}
+
+.article-team-header > h3 {
+  color: hsl(0, 0%, 22%);
+}
+
+.article-team-header > p {
+  color: hsl(0, 0%, 22%);
+}
+
+.article-team-text {
+  color: hsl(0, 0%, 28%);
+}
 
 @media (min-width: 768px) {
   .about-module {
@@ -109,6 +154,10 @@
       "values  cuisine"
       "team team"
       "footer footer";
+  }
+
+  .section-cuisine {
+    background-color: hsl(0, 0%, 90%);
   }
 
   .img-frying-pan {
@@ -122,5 +171,9 @@
       "header values cuisine"
       "team team team"
       "footer footer footer";
+  }
+
+  .section-cuisine {
+    background-color: hsl(0, 0%, 95%);
   }
 }
