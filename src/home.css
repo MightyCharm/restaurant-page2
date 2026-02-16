@@ -8,7 +8,7 @@
   justify-items: center;
 }
 
-.card-home-header {
+.home-header {
   grid-area: header;
 
   display: flex;
@@ -20,7 +20,7 @@
   background-color: hsl(0, 0%, 95%);
 }
 
-.card-featured-dish {
+.featured-dish {
   grid-area: dish;
 
   display: flex;
@@ -32,7 +32,7 @@
   background-color: hsl(0, 0%, 90%);
 }
 
-.card-featured-dish > article {
+.featured-dish > article {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -66,7 +66,7 @@
   color: red;
 }
 
-.card-home-hours {
+.home-hours {
   grid-area: hours;
 
   display: flex;
@@ -80,7 +80,7 @@
   background-color: hsl(0, 0%, 95%);
 }
 
-.card-home-events {
+.home-events {
   grid-area: events;
 
   display: flex;
@@ -144,7 +144,6 @@
       "footer footer footer";
     grid-template-rows: auto auto auto;
     grid-template-columns: 1fr 1fr 1fr;
-    border: 1px solid red;
   }
 
   .card-home-header {

@@ -94,18 +94,12 @@ body {
 
 .content {
   display: grid;
-  /* padding: 2rem 5rem; */
-
+  justify-items: center;
   min-height: 100%;
   grid-template-rows: min-content 1fr;
 
   background-position: center;
   background-size: cover;
-}
-
-.card {
-  background-color: white;
-  /* border-radius: 8px; */
 }
 
 .container-footer {
@@ -158,7 +152,7 @@ body {
 }
 
 /* footer for restaurant modules*/
-.card-restaurant-footer {
+.restaurant-footer {
   grid-area: footer;
 
   display: flex;

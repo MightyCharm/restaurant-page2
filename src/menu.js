@@ -62,20 +62,31 @@ function createMenuModule() {
 function createHeader() {
   const header = document.createElement("header");
   const h2 = document.createElement("h2");
-  header.classList.add("card", "card-menu-header");
-  h2.innerHTML = "MENU";
+  const para = document.createElement("p");
+  header.classList.add("menu-header");
+  h2.textContent = "MENU";
+  para.textContent = "Seasonal dishes from scratch, just for you.";
   header.appendChild(h2);
+  header.appendChild(para);
 
   return header;
 }
 
 function createSectionDrinks() {
   const section = document.createElement("section");
+  const divHeader = document.createElement("div");
   const h3 = document.createElement("h3");
+  const para = document.createElement("p");
   section.classList.add("section", "section-drinks");
-  h3.classList.add("card");
+  divHeader.classList.add("section-div-header");
+  h3.classList.add("section-header");
   h3.innerHTML = `<i class="fas fa-cocktail"></i> Drinks`;
-  section.appendChild(h3);
+  para.classList.add("section-para");
+  para.textContent =
+    "From bold reads to crisp cocktails, we've got your drink covered.";
+  divHeader.appendChild(h3);
+  divHeader.appendChild(para);
+  section.appendChild(divHeader);
 
   const drinks = data.filter((item) => item.section === "drinks");
   return createSection(section, drinks);
@@ -83,24 +94,41 @@ function createSectionDrinks() {
 
 function createSectionStarter() {
   const section = document.createElement("section");
+  const divHeader = document.createElement("div");
   const h3 = document.createElement("h3");
+  const para = document.createElement("p");
   section.classList.add("section", "section-starter");
-  h3.classList.add("card");
+  divHeader.classList.add("section-div-header");
+  h3.classList.add("section-header");
   h3.innerHTML = `<i class="fas fa-plate-wheat"></i> Starter`;
+  para.classList.add("section-para");
+  para.textContent =
+    "Small bites, big flavors - the perfect start to your meal.";
 
-  section.appendChild(h3);
+  divHeader.appendChild(h3);
+  divHeader.appendChild(para);
+  section.appendChild(divHeader);
   const starter = data.filter((item) => item.section === "starter");
-  
+
   return createSection(section, starter);
 }
 
 function createSectionMainCourse() {
   const section = document.createElement("section");
+  const divHeader = document.createElement("div");
   const h3 = document.createElement("h3");
+  const para = document.createElement("p");
   section.classList.add("section", "section-main-course");
-  h3.classList.add("card");
+  divHeader.classList.add("section-div-header");
+  h3.classList.add("section-header");
   h3.innerHTML = `<i class="fas fa-utensils"></i> Main Course`;
-  section.appendChild(h3);
+  para.classList.add("section-para");
+  para.textContent =
+    "The heart of the menu - bold flavors, fresh ingredients, perfectly prepared.";
+
+  divHeader.appendChild(h3);
+  divHeader.appendChild(para);
+  section.appendChild(divHeader);
 
   const mainCourse = data.filter((item) => item.section === "main-course");
   return createSection(section, mainCourse);
@@ -108,11 +136,19 @@ function createSectionMainCourse() {
 
 function createSectionDessert() {
   const section = document.createElement("section");
+  const divHeader = document.createElement("div");
   const h3 = document.createElement("h3");
+  const para = document.createElement("p");
   section.classList.add("section", "section-dessert");
-  h3.classList.add("card");
+  divHeader.classList.add("section-div-header");
+  h3.classList.add("section-header");
   h3.innerHTML = `<i class="fas fa-ice-cream"></i> Dessert`;
-  section.appendChild(h3);
+  para.classList.add("section-para");
+  para.textContent = "Because every great meal deserves a perfect dessert.";
+
+  divHeader.appendChild(h3);
+  divHeader.appendChild(para);
+  section.appendChild(divHeader);
 
   const dessert = data.filter((item) => item.section === "dessert");
 

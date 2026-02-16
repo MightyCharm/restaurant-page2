@@ -7,33 +7,37 @@
     "dessert"
     "footer";
   gap: 2rem;
+  background-color: grey;
 }
 
-.card-menu-header {
+.menu-header {
   grid-area: header;
+
   padding: 2rem;
   text-align: center;
+  font-size: 2rem;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+}
+
+.menu-header h2 {
+  color: hsl(0, 0%, 20%);
+}
+
+.menu-header > p {
+  color: hsl(0, 0%, 50%);
+  font-size: 1rem;
 }
 
 .section {
   display: grid;
   justify-items: center;
+  align-items: center;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
-}
-
-.section > h3 {
-  grid-column: 1 / -1;
-  padding: 1rem;
-  text-align: center;
-  font-size: 1.5rem;
-}
-
-/* to counter justify-items in section and keep elements span the whole width */
-.card-menu-header,
-.section,
-.section > h3 {
+  padding: 1rem 2rem;
   width: 100%;
+  background-color: grey;
 }
 
 .section-drinks {
@@ -52,24 +56,41 @@
   grid-area: dessert;
 }
 
+.section-div-header {
+  grid-column: 1 / -1; /* stretch first row */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+}
+
+.section-header {
+  font-size: 2rem;
+}
+
+.section-para {
+}
+
 .card-menu {
   display: grid;
   grid-template-rows: auto 1fr auto;
   justify-items: center;
   gap: 1rem;
+  border-radius: 4px;
   padding: 1rem;
-  transition:
-    transform 0.3s ease-in-out,
-    box-shadow 0.3s ease-in-out;
+  height: 100%;
+  background-color: white;
 }
 
 .card-menu:hover {
-  transform: scale(1.02);
-  box-shadow: 0px 0px 15px hsla(0, 0%, 100%, 0.2);
+  box-shadow: 0px 0px 5px hsla(0, 0%, 100%, 0.5);
 }
 
 .card-menu > strong {
   font-size: 1.2rem;
+  color: rgb(51, 51, 51);
 }
 
 .card-img-description {
@@ -98,4 +119,9 @@
 .currency {
   color: hsl(0, 0%, 38%);
   font-size: 0.9em;
+}
+
+@media (hover: hover) {
+  .card-menu:hover {
+  }
 }

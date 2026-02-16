@@ -35,6 +35,7 @@ function createFooter() {
   a.href = "#";
   a.target = "_blank";
 
+  footer.classList.add("restaurant-footer");
   header.classList.add("sentence");
 
   divLocation.classList.add("location");
@@ -49,8 +50,6 @@ function createFooter() {
   iconContact.setAttribute("aria-hidden", "true");
   ulContact.classList.add("ul-contact");
   a.classList.add("link-email-contact");
-
-  footer.classList.add("card", "card-restaurant-footer");
 
   header.innerHTML =
     "<span>Good</span> food, <span>good</span> vibes, <span>good</span> people — welcome home.";

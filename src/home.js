@@ -15,7 +15,7 @@ function createHomeModule() {
 function createHeader() {
   const header = document.createElement("header");
   const para = document.createElement("p");
-  header.classList.add("card", "card-home-header");
+  header.classList.add("home-header");
   para.textContent = `The Recovery Room — a place to unwind and recover from daily \
     stress. Just relax, breathe, and recharge. We use only good ingredients in all \
     our food and drinks — nothing fake, nothing cheap. Just honest, quality stuff \
@@ -43,7 +43,7 @@ function createDailyDish(dish) {
   strongName.textContent = dish.name;
   figcaption.textContent = dish.caption;
 
-  section.classList.add("card", "card-featured-dish");
+  section.classList.add("featured-dish");
   img.classList.add("img-featured-dish");
   divPriceInfo.classList.add("price-info");
   span.classList.add("discount");
@@ -90,7 +90,7 @@ function createHours() {
   const h2 = document.createElement("h2");
   const ul = document.createElement("ul");
 
-  section.classList.add("card", "card-home-hours");
+  section.classList.add("home-hours");
 
   h2.textContent = "Opening Hours";
 
@@ -129,7 +129,7 @@ function createEvents() {
   const h2 = document.createElement("h2");
   const ul = document.createElement("ul");
 
-  section.classList.add("card", "card-home-events");
+  section.classList.add("home-events");
 
   h2.textContent = "Events";
 
